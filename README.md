@@ -3,7 +3,8 @@ Rasterio
 
 Save each band separately
 
-```
+````python
+
 import os
 import rasterio
 
