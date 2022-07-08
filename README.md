@@ -8,18 +8,16 @@ Save each band separately
 import os
 import rasterio
 
-a = [ "B2_p10", "B2_p20", "B2_p50", "B2_p90", "B2_p95", "B12_p10", "B12_p20", "B12_p50" , "B12_p90" , "B12_p95" ,
-             "B8_p10", "B8_p20", "B8_p50", "B8_p90", "B8_p95", "B6_p10",  "B6_p20", "B6_p50", "B6_p90", "B6_p95"] 
 
-src = rasterio.open('../Data/Tree_Heights/S2.tif')
-for band in range(1, src.count):
+ src = rasterio.open(wv_tif)
+    for band in range(1, src.count):
         single_band = src.read(band)
 
         # get the output name
-        out_name = os.path.basename('../Data/Tree_Heights/S2.tif')
+        out_name = os.path.basename(wv_tif)
         file, ext = os.path.splitext(out_name)
-        name = file + "_" + a[band] + ".tif"
-        out_img = os.path.join('../Data/Tree_Heights/', name)
+        name = file + "_" + "B" + str(band) + ".tif"
+        out_img = os.path.join(folder, name)
 
         print(out_img + " done")
 
