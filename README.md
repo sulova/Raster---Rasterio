@@ -3,7 +3,7 @@ Rasterio
 
 # Save each band separately
 
-```
+```python
 
 import os
 import rasterio
@@ -32,7 +32,7 @@ import rasterio
 ```
 
 Name them differently , first should be empty
-```
+```python
 
 a = [ "","B2_p10", "B2_p20", "B2_p50", "B2_p90", "B2_p95", "B12_p10", "B12_p20", "B12_p50" , "B12_p90" , "B12_p95" ,
              "B8_p10", "B8_p20", "B8_p50", "B8_p90", "B8_p95", "B6_p10",  "B6_p20", "B6_p50", "B6_p90", "B6_p95"] 
